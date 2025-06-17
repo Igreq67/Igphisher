@@ -1,34 +1,30 @@
-# IGPHISHER 🎯
 
-**Un outil éducatif de phishing simulé pour Termux**  
-Créé par **IGREQ HENDRIX**
+![IGPHISHER Banner](igreq.png)
+
+# IGPHISHER
+
+> **Créé par IGREQ HENDRIX**
+
+IGPHISHER est un outil éducatif de démonstration de phishing **personnalisé**, basé sur Termux, destiné à des usages **éthiques**, de **sécurité offensive** ou de sensibilisation à la cybersécurité.
 
 ---
 
 ## 🚀 Fonctionnalités
 
-- Pages de phishing pour Instagram & Facebook
-- Capture des identifiants dans un fichier `credentials.log`
-- Interface simplifiée pour Termux
-- Entièrement personnalisés 
+- Interface personnalisée avec le nom du créateur
+- Pages de phishing simples (index.html + login.txt)
+- Capture automatique des identifiants saisis
+- Sauvegarde locale dans `sites-saved/`
+- Compatible Termux Android (sans root)
+- Exécutable avec la commande `hendrix`
+
 ---
 
-## 📦 Installation
+## 📦 Installation rapide
 
 ```bash
-git clone https://github.com/Igreq67/igphisher.git
+pkg update && pkg upgrade
+pkg install git php curl openssh -y
+git clone https://github.com/ton-utilisateur/igphisher.git
 cd igphisher
-bash igphisher.sh
-## structure 
-igphisher/
-├── igphisher.sh
-├── logs/
-│   └── credentials.log
-└── sites/
-    ├── instagram/
-    │   ├── index.html
-    │   └── login.txt
-    └── facebook/
-        ├── index.html
-        └── login.txt
-
+bash install.sh
